@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		18FAF2D91DC83F3E005E70FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2D81DC83F3E005E70FA /* main.m */; };
 		18FAF2DC1DC83F3E005E70FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2DB1DC83F3E005E70FA /* AppDelegate.m */; };
-		18FAF2DF1DC83F3E005E70FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2DE1DC83F3E005E70FA /* ViewController.m */; };
-		18FAF2E21DC83F3E005E70FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FAF2E01DC83F3E005E70FA /* Main.storyboard */; };
 		18FAF2E41DC83F3E005E70FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FAF2E31DC83F3E005E70FA /* Assets.xcassets */; };
 		18FAF2E71DC83F3E005E70FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FAF2E51DC83F3E005E70FA /* LaunchScreen.storyboard */; };
+		18FAF2F71DC840DA005E70FA /* LZBTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2F61DC840DA005E70FA /* LZBTabBarViewController.m */; };
+		18FAF2FA1DC840F6005E70FA /* LZBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2F91DC840F6005E70FA /* LZBTabBar.m */; };
+		18FAF2FD1DC87F76005E70FA /* LZBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2FC1DC87F76005E70FA /* LZBMainViewController.m */; };
+		18FAF3001DC87F8C005E70FA /* LZBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2FF1DC87F8C005E70FA /* LZBSecondViewController.m */; };
+		18FAF3031DC87F9A005E70FA /* LZBThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF3021DC87F9A005E70FA /* LZBThreeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,19 @@
 		18FAF2D81DC83F3E005E70FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18FAF2DA1DC83F3E005E70FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18FAF2DB1DC83F3E005E70FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18FAF2DD1DC83F3E005E70FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18FAF2DE1DC83F3E005E70FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		18FAF2E11DC83F3E005E70FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18FAF2E31DC83F3E005E70FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18FAF2E61DC83F3E005E70FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18FAF2E81DC83F3E005E70FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FAF2F51DC840DA005E70FA /* LZBTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBarViewController.h; sourceTree = "<group>"; };
+		18FAF2F61DC840DA005E70FA /* LZBTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBarViewController.m; sourceTree = "<group>"; };
+		18FAF2F81DC840F6005E70FA /* LZBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBTabBar.h; sourceTree = "<group>"; };
+		18FAF2F91DC840F6005E70FA /* LZBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBTabBar.m; sourceTree = "<group>"; };
+		18FAF2FB1DC87F76005E70FA /* LZBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBMainViewController.h; sourceTree = "<group>"; };
+		18FAF2FC1DC87F76005E70FA /* LZBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBMainViewController.m; sourceTree = "<group>"; };
+		18FAF2FE1DC87F8C005E70FA /* LZBSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBSecondViewController.h; sourceTree = "<group>"; };
+		18FAF2FF1DC87F8C005E70FA /* LZBSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBSecondViewController.m; sourceTree = "<group>"; };
+		18FAF3011DC87F9A005E70FA /* LZBThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBThreeViewController.h; sourceTree = "<group>"; };
+		18FAF3021DC87F9A005E70FA /* LZBThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBThreeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +68,15 @@
 		18FAF2D61DC83F3E005E70FA /* LZBTabbarViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18FAF2EE1DC83FA3005E70FA /* LZBTabbarViewController */,
 				18FAF2DA1DC83F3E005E70FA /* AppDelegate.h */,
 				18FAF2DB1DC83F3E005E70FA /* AppDelegate.m */,
-				18FAF2DD1DC83F3E005E70FA /* ViewController.h */,
-				18FAF2DE1DC83F3E005E70FA /* ViewController.m */,
-				18FAF2E01DC83F3E005E70FA /* Main.storyboard */,
+				18FAF2FB1DC87F76005E70FA /* LZBMainViewController.h */,
+				18FAF2FC1DC87F76005E70FA /* LZBMainViewController.m */,
+				18FAF2FE1DC87F8C005E70FA /* LZBSecondViewController.h */,
+				18FAF2FF1DC87F8C005E70FA /* LZBSecondViewController.m */,
+				18FAF3011DC87F9A005E70FA /* LZBThreeViewController.h */,
+				18FAF3021DC87F9A005E70FA /* LZBThreeViewController.m */,
 				18FAF2E31DC83F3E005E70FA /* Assets.xcassets */,
 				18FAF2E51DC83F3E005E70FA /* LaunchScreen.storyboard */,
 				18FAF2E81DC83F3E005E70FA /* Info.plist */,
@@ -77,6 +91,17 @@
 				18FAF2D81DC83F3E005E70FA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18FAF2EE1DC83FA3005E70FA /* LZBTabbarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18FAF2F51DC840DA005E70FA /* LZBTabBarViewController.h */,
+				18FAF2F61DC840DA005E70FA /* LZBTabBarViewController.m */,
+				18FAF2F81DC840F6005E70FA /* LZBTabBar.h */,
+				18FAF2F91DC840F6005E70FA /* LZBTabBar.m */,
+			);
+			path = LZBTabbarViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +164,6 @@
 			files = (
 				18FAF2E71DC83F3E005E70FA /* LaunchScreen.storyboard in Resources */,
 				18FAF2E41DC83F3E005E70FA /* Assets.xcassets in Resources */,
-				18FAF2E21DC83F3E005E70FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,23 +174,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FAF2DF1DC83F3E005E70FA /* ViewController.m in Sources */,
+				18FAF2FD1DC87F76005E70FA /* LZBMainViewController.m in Sources */,
+				18FAF3031DC87F9A005E70FA /* LZBThreeViewController.m in Sources */,
+				18FAF3001DC87F8C005E70FA /* LZBSecondViewController.m in Sources */,
+				18FAF2FA1DC840F6005E70FA /* LZBTabBar.m in Sources */,
 				18FAF2DC1DC83F3E005E70FA /* AppDelegate.m in Sources */,
 				18FAF2D91DC83F3E005E70FA /* main.m in Sources */,
+				18FAF2F71DC840DA005E70FA /* LZBTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18FAF2E01DC83F3E005E70FA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18FAF2E11DC83F3E005E70FA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18FAF2E51DC83F3E005E70FA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

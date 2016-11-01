@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LZBSecondViewController.h
 //  LZBTabbarViewController
 //
 //  Created by zibin on 16/11/1.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LZBSecondViewController : UIViewController
 
 @end
-

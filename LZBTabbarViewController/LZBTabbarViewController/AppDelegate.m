@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "LZBTabBarViewController.h"
+#import "LZBMainViewController.h"
+#import "LZBSecondViewController.h"
+#import "LZBThreeViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +20,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
+    //1.创建Window
+     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+     self.window.backgroundColor = [UIColor whiteColor];
+
+     //a.初始化一个tabBar控制器
+     LZBTabBarViewController *tb=[[LZBTabBarViewController alloc]init];
+     //设置控制器为Window的根控制器
+     self.window.rootViewController=tb;
+    
+    //子控件
+    LZBMainViewController *c1=[[LZBMainViewController alloc]init];
+    tb.viewControllers = @[c1];
+    
+    
+    
+    //2.设置Window为主窗口并显示出来
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
