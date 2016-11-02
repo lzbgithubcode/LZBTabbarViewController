@@ -170,6 +170,19 @@
         _selectBackgroundImage = selectBackgroundImage;
 }
 
+- (void)setBadgeValue:(NSString *)badgeValue
+{
+    if(badgeValue.length == 0) return;
+    _badgeValue = badgeValue;
+    [self setNeedsDisplay];
+}
+
+- (void)setTitle:(NSString *)title
+{
+    _title = title;
+    [self setNeedsDisplay];
+}
+
 
 @end
 
