@@ -164,7 +164,7 @@
  @param index 点击的tabbar的index
  @return 是否允许
  */
-- (BOOL)tabBar:(LZBTabBar *)tabBar shouldSelectItemAtIndex:(NSInteger)index;
+- (BOOL)lzb_tabBar:(LZBTabBar *)tabBar shouldSelectItemAtIndex:(NSInteger)index;
 
 
 /**
@@ -173,7 +173,7 @@
  @param tabBar 自定义tabbar
  @param index 点击的tabbar的index
  */
-- (void)tabBar:(LZBTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index;
+- (void)lzb_tabBar:(LZBTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index;
 @end
 
 

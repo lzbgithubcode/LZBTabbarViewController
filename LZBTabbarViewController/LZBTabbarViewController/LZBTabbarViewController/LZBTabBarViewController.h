@@ -48,7 +48,7 @@
  @param viewController   点击的那个控制器
  @return 是否允许
  */
-- (BOOL)tabBarController:(LZBTabBarViewController *)tabBarController shouldSelectViewController:(UIViewController *)viewController;
+- (BOOL)lzb_tabBarController:(LZBTabBarViewController *)tabBarController shouldSelectViewController:(UIViewController *)viewController;
 
 
 /**
@@ -57,15 +57,15 @@
  @param tabBarController tabbar控制器
  @param viewController 点击的那个控制器
  */
-- (void)tabBarController:(LZBTabBarViewController *)tabBarController didSelectViewController:(UIViewController *)viewController;
+- (void)lzb_tabBarController:(LZBTabBarViewController *)tabBarController didSelectViewController:(UIViewController *)viewController;
 
 @end
 
 @interface UIViewController (LZBTabBarViewControllerItem)
 
-@property(nonatomic, strong) LZBTabBarItem *tabBarCurrentItem;
+@property(nonatomic, strong) LZBTabBarItem *lzb_tabBarItem;
 
-@property(nonatomic, readonly, strong) LZBTabBarViewController *lzb_tabBarController;
+@property(nonatomic, strong) LZBTabBarViewController *lzb_tabBarController;
 @end
 
 

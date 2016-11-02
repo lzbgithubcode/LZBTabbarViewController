@@ -250,15 +250,15 @@
     if(![self.items containsObject:item]) return;
     
     NSInteger index = [self.items indexOfObject:item];
-    if([self.delegate respondsToSelector:@selector(tabBar:shouldSelectItemAtIndex:)])
+    if([self.delegate respondsToSelector:@selector(lzb_tabBar:shouldSelectItemAtIndex:)])
     {
-        if(![self.delegate tabBar:self shouldSelectItemAtIndex:index])
+        if(![self.delegate lzb_tabBar:self shouldSelectItemAtIndex:index])
             return;
     }
     self.currentSelectItem = item;
-    if([self.delegate respondsToSelector:@selector(tabBar:didSelectItemAtIndex:)])
+    if([self.delegate respondsToSelector:@selector(lzb_tabBar:didSelectItemAtIndex:)])
     {
-        [self.delegate tabBar:self didSelectItemAtIndex:index];
+        [self.delegate lzb_tabBar:self didSelectItemAtIndex:index];
     }
     
 }
@@ -267,6 +267,7 @@
 {
      if(_currentSelectItem == currentSelectItem)
          return;
+    _currentSelectItem.selected = NO;
     _currentSelectItem = currentSelectItem;
     _currentSelectItem.selected = YES;
 }

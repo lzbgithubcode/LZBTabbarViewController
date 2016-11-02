@@ -7,10 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "LZBTabBarViewController.h"
-#import "LZBMainViewController.h"
-#import "LZBSecondViewController.h"
-#import "LZBThreeViewController.h"
+
+#import "LZBCustomViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,22 +24,9 @@
      self.window.backgroundColor = [UIColor whiteColor];
 
      //a.初始化一个tabBar控制器
-     LZBTabBarViewController *tb=[[LZBTabBarViewController alloc]init];
+     LZBCustomViewController *tb=[[LZBCustomViewController alloc]init];
      //设置控制器为Window的根控制器
      self.window.rootViewController=tb;
-    
-    //子控件
-    LZBMainViewController *c1=[[LZBMainViewController alloc]init];
-    c1.title = @"首页";
-    
-    LZBSecondViewController *c2=[[LZBSecondViewController alloc]init];
-    c2.title = @"第二页";
-    
-    LZBThreeViewController *c3=[[LZBThreeViewController alloc]init];
-    c3.title = @"第三页";
-    tb.viewControllers = @[c1,c2,c3];
-    
-    
     
     //2.设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];

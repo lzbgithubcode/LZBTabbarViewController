@@ -7,6 +7,7 @@
 //
 
 #import "LZBTabBarViewController.h"
+#import <objc/runtime.h>
 
 #define LZB_TABBAR_DEFULT_HEIGHT 49
 @interface LZBTabBarViewController ()<LZBTabBarDelegate>
@@ -49,6 +50,7 @@
         LZBTabBarItem *tabBarItem = [[LZBTabBarItem alloc] init];
          [tabBarItems addObject:tabBarItem];
          [tabBarItem setTitle:viewController.title];
+         viewController.lzb_tabBarController = self;
     }
     [self.tabbar setItems:tabBarItems];
 }
@@ -74,13 +76,21 @@
     
 }
 
+- (NSInteger)indexForTabBarViewControllerViewControllers:(UIViewController *)viewController
+{
+  if(viewController.navigationController)
+      viewController = viewController.navigationController;
+    return [self.viewControllers indexOfObject:viewController];
+      
+}
+
 #pragma mark- tabbarDelegate
-- (BOOL)tabBar:(LZBTabBar *)tabBar shouldSelectItemAtIndex:(NSInteger)index
+- (BOOL)lzb_tabBar:(LZBTabBar *)tabBar shouldSelectItemAtIndex:(NSInteger)index
 {
     if (index < 0 || index >= self.viewControllers.count)  return NO;
-    if([self.delegate respondsToSelector:@selector(tabBarController:shouldSelectViewController:)])
+    if([self.delegate respondsToSelector:@selector(lzb_tabBarController:shouldSelectViewController:)])
     {
-        if(![self.delegate tabBarController:self shouldSelectViewController:[self.viewControllers objectAtIndex:index]])
+        if(![self.delegate lzb_tabBarController:self shouldSelectViewController:[self.viewControllers objectAtIndex:index]])
             return NO;
     }
     
@@ -102,12 +112,12 @@
     
 }
 
-- (void)tabBar:(LZBTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index
+- (void)lzb_tabBar:(LZBTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index
 {
    if (index < 0 || index >= self.viewControllers.count)  return;
     [self setSelectedIndex:index];
-    if([self.delegate respondsToSelector:@selector(tabBarController:didSelectViewController:)])
-    [self.delegate tabBarController:self didSelectViewController:[self.viewControllers objectAtIndex:index]];
+    if([self.delegate respondsToSelector:@selector(lzb_tabBarController:didSelectViewController:)])
+    [self.delegate lzb_tabBarController:self didSelectViewController:[self.viewControllers objectAtIndex:index]];
 }
 
 
@@ -140,4 +150,50 @@
    }
     return _tabbar;
 }
+@end
+
+
+static const void *LZBTabBarViewControllerItemKey = @"LZBTabBarViewControllerItemKey";
+
+@implementation UIViewController (LZBTabBarViewControllerItem)
+
+- (void)setLzb_tabBarController:(LZBTabBarViewController *)lzb_tabBarController
+{
+   objc_setAssociatedObject(self, LZBTabBarViewControllerItemKey, lzb_tabBarController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (LZBTabBarViewController *)lzb_tabBarController
+{
+    LZBTabBarViewController *tabBarViewController = objc_getAssociatedObject(self, LZBTabBarViewControllerItemKey);
+    if(!tabBarViewController && self.parentViewController)
+        tabBarViewController = self.parentViewController.lzb_tabBarController;
+    return tabBarViewController;
+}
+
+- (void)setLzb_tabBarItem:(LZBTabBarItem *)lzb_tabBarItem
+{
+    LZBTabBarViewController *tabBarViewController = self.lzb_tabBarController;
+    if(tabBarViewController == nil) return;
+    
+    LZBTabBar *tabBar = tabBarViewController.tabbar;
+    //当前这个控制器在tabbar的索引
+    NSInteger index = [tabBarViewController indexForTabBarViewControllerViewControllers:self];
+    
+    if(index<0 || index >= tabBarViewController.tabbar.items.count) return;
+    //替换
+    NSMutableArray *tabBarItems = [[NSMutableArray alloc] initWithArray:[tabBar items]];
+    [tabBarItems replaceObjectAtIndex:index withObject:lzb_tabBarItem];
+    [tabBar setItems:tabBarItems];
+    
+}
+
+- (LZBTabBarItem *)lzb_tabBarItem
+{
+    LZBTabBarViewController *tabBarController = [self lzb_tabBarController];
+    NSInteger index = [tabBarController indexForTabBarViewControllerViewControllers:self];
+    if(index<0 || index >= tabBarController.tabbar.items.count) return nil;
+    return [tabBarController.tabbar.items objectAtIndex:index];
+}
+
+
 @end

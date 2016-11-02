@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186031511DC9C2FC00BDEF78 /* LZBCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186031501DC9C2FC00BDEF78 /* LZBCustomViewController.m */; };
+		186031651DC9CCCE00BDEF78 /* icon_tab_btn_discover_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1860315F1DC9CCCE00BDEF78 /* icon_tab_btn_discover_s@2x.png */; };
+		186031661DC9CCCE00BDEF78 /* icon_tab_btn_discover_x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186031601DC9CCCE00BDEF78 /* icon_tab_btn_discover_x@2x.png */; };
+		186031671DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186031611DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_s@2x.png */; };
+		186031681DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186031621DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_x@2x.png */; };
+		186031691DC9CCCE00BDEF78 /* icon_tab_btn_me_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186031631DC9CCCE00BDEF78 /* icon_tab_btn_me_s@2x.png */; };
+		1860316A1DC9CCCE00BDEF78 /* icon_tab_btn_me_x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186031641DC9CCCE00BDEF78 /* icon_tab_btn_me_x@2x.png */; };
 		18FAF2D91DC83F3E005E70FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2D81DC83F3E005E70FA /* main.m */; };
 		18FAF2DC1DC83F3E005E70FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2DB1DC83F3E005E70FA /* AppDelegate.m */; };
 		18FAF2E41DC83F3E005E70FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FAF2E31DC83F3E005E70FA /* Assets.xcassets */; };
@@ -19,6 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1860314F1DC9C2FC00BDEF78 /* LZBCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBCustomViewController.h; sourceTree = "<group>"; };
+		186031501DC9C2FC00BDEF78 /* LZBCustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBCustomViewController.m; sourceTree = "<group>"; };
+		1860315F1DC9CCCE00BDEF78 /* icon_tab_btn_discover_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_btn_discover_s@2x.png"; sourceTree = "<group>"; };
+		186031601DC9CCCE00BDEF78 /* icon_tab_btn_discover_x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_btn_discover_x@2x.png"; sourceTree = "<group>"; };
+		186031611DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_btn_grow-up_s@2x.png"; sourceTree = "<group>"; };
+		186031621DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_btn_grow-up_x@2x.png"; sourceTree = "<group>"; };
+		186031631DC9CCCE00BDEF78 /* icon_tab_btn_me_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_btn_me_s@2x.png"; sourceTree = "<group>"; };
+		186031641DC9CCCE00BDEF78 /* icon_tab_btn_me_x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_btn_me_x@2x.png"; sourceTree = "<group>"; };
 		18FAF2D41DC83F3E005E70FA /* LZBTabbarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZBTabbarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FAF2D81DC83F3E005E70FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18FAF2DA1DC83F3E005E70FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186031521DC9CC5400BDEF78 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1860315F1DC9CCCE00BDEF78 /* icon_tab_btn_discover_s@2x.png */,
+				186031601DC9CCCE00BDEF78 /* icon_tab_btn_discover_x@2x.png */,
+				186031611DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_s@2x.png */,
+				186031621DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_x@2x.png */,
+				186031631DC9CCCE00BDEF78 /* icon_tab_btn_me_s@2x.png */,
+				186031641DC9CCCE00BDEF78 /* icon_tab_btn_me_x@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		18FAF2CB1DC83F3E005E70FA = {
 			isa = PBXGroup;
 			children = (
@@ -68,9 +96,12 @@
 		18FAF2D61DC83F3E005E70FA /* LZBTabbarViewController */ = {
 			isa = PBXGroup;
 			children = (
+				186031521DC9CC5400BDEF78 /* Resource */,
 				18FAF2EE1DC83FA3005E70FA /* LZBTabbarViewController */,
 				18FAF2DA1DC83F3E005E70FA /* AppDelegate.h */,
 				18FAF2DB1DC83F3E005E70FA /* AppDelegate.m */,
+				1860314F1DC9C2FC00BDEF78 /* LZBCustomViewController.h */,
+				186031501DC9C2FC00BDEF78 /* LZBCustomViewController.m */,
 				18FAF2FB1DC87F76005E70FA /* LZBMainViewController.h */,
 				18FAF2FC1DC87F76005E70FA /* LZBMainViewController.m */,
 				18FAF2FE1DC87F8C005E70FA /* LZBSecondViewController.h */,
@@ -163,7 +194,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18FAF2E71DC83F3E005E70FA /* LaunchScreen.storyboard in Resources */,
+				186031651DC9CCCE00BDEF78 /* icon_tab_btn_discover_s@2x.png in Resources */,
+				186031661DC9CCCE00BDEF78 /* icon_tab_btn_discover_x@2x.png in Resources */,
+				186031681DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_x@2x.png in Resources */,
+				186031671DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_s@2x.png in Resources */,
 				18FAF2E41DC83F3E005E70FA /* Assets.xcassets in Resources */,
+				186031691DC9CCCE00BDEF78 /* icon_tab_btn_me_s@2x.png in Resources */,
+				1860316A1DC9CCCE00BDEF78 /* icon_tab_btn_me_x@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +217,7 @@
 				18FAF2FA1DC840F6005E70FA /* LZBTabBar.m in Sources */,
 				18FAF2DC1DC83F3E005E70FA /* AppDelegate.m in Sources */,
 				18FAF2D91DC83F3E005E70FA /* main.m in Sources */,
+				186031511DC9C2FC00BDEF78 /* LZBCustomViewController.m in Sources */,
 				18FAF2F71DC840DA005E70FA /* LZBTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +365,7 @@
 				18FAF2ED1DC83F3E005E70FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
