@@ -32,7 +32,14 @@
     
     //子控件
     LZBMainViewController *c1=[[LZBMainViewController alloc]init];
-    tb.viewControllers = @[c1];
+    c1.title = @"首页";
+    
+    LZBSecondViewController *c2=[[LZBSecondViewController alloc]init];
+    c2.title = @"第二页";
+    
+    LZBThreeViewController *c3=[[LZBThreeViewController alloc]init];
+    c3.title = @"第三页";
+    tb.viewControllers = @[c1,c2,c3];
     
     
     
