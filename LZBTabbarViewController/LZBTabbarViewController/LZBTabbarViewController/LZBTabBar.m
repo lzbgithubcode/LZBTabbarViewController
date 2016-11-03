@@ -31,7 +31,6 @@
     _selectTitleAttributes = [_unselectTitleAttributes copy];
 
     _badgeValue = @"";
-    //_badgeBackgroundColor = [UIColor redColor];
     _badgeTextColor = [UIColor whiteColor];
     _badgeTextFont = [UIFont systemFontOfSize:12.0];
     _badgeOffset = UIOffsetZero;
@@ -63,13 +62,16 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);
     
+    if(backgroundImage)
+        [backgroundImage drawInRect:self.bounds];
+    
     if(self.title.length == 0)  //只有图片
     {
         [image drawInRect:CGRectMake((frameSize.width - imageSize.width)*0.5+self.imageOffest.horizontal,
                                      (frameSize.height - imageSize.height)*0.5 + self.imageOffest.vertical, imageSize.width,
                                         imageSize.height)];
     }
-    else
+    else  //图文
     {
         titleSize = [self.title sizeWithAttributes:titleAttributes];
         CGFloat imageTopMaigin = (frameSize.height - imageSize.height - titleSize.height)*0.5;
@@ -91,7 +93,6 @@
     if(self.badgeBackgroundColor)
     {
         CGFloat badgeBackWidthHeight = 10;
-        
         bageBackFrame  = CGRectMake(frameSize.width - badgeBackWidthHeight -
                                     self.badgeBackgroundOffset.horizontal,
                                     self.badgeBackgroundOffset.vertical,
@@ -114,16 +115,16 @@
     }
     
     //角标文字
-    if(self.badgeValue.length == 0)
+    if(self.badgeValue)
     {
        NSDictionary *badgeAttrubute = @{NSFontAttributeName : self.badgeTextFont,
-                                         NSForegroundColorAttributeName : self.badgeTextColor};
+                                        NSForegroundColorAttributeName : self.badgeTextColor};
         
        CGSize  badgeValueSize = [self.badgeValue sizeWithAttributes:badgeAttrubute];
         //必须先设置颜色
         CGContextSetFillColorWithColor(context, self.badgeTextColor.CGColor);
         
-        [self.badgeValue drawInRect:CGRectMake(frameSize.width- badgeValueSize.width - self.badgeOffset.horizontal, self.badgeOffset.horizontal, badgeValueSize.width, badgeValueSize.height) withAttributes:badgeAttrubute];
+        [self.badgeValue drawInRect:CGRectMake(frameSize.width- badgeValueSize.width - self.badgeOffset.horizontal, self.badgeOffset.vertical, badgeValueSize.width, badgeValueSize.height) withAttributes:badgeAttrubute];
     }
     
     CGContextRestoreGState(context);
@@ -172,7 +173,6 @@
 
 - (void)setBadgeValue:(NSString *)badgeValue
 {
-    if(badgeValue.length == 0) return;
     _badgeValue = badgeValue;
     [self setNeedsDisplay];
 }
@@ -193,6 +193,7 @@
 @interface LZBTabBar()
 
 @property (nonatomic, assign) CGFloat itemWidth;
+@property (nonatomic, assign) BOOL isAnimation;
 
 @end
 
@@ -237,7 +238,6 @@
         index++;
     }
     
-    
 }
 
 #pragma mark- API
@@ -278,11 +278,29 @@
 
 - (void)setCurrentSelectItem:(LZBTabBarItem *)currentSelectItem
 {
-     if(_currentSelectItem == currentSelectItem)
-         return;
+    [self setCurrentSelectItem:currentSelectItem animation:self.isAnimation];
+}
+
+- (void)setCurrentSelectItem:(LZBTabBarItem *)currentSelectItem animation:(BOOL)animation
+{
+    if(_currentSelectItem == currentSelectItem)
+        return;
+    
     _currentSelectItem.selected = NO;
     _currentSelectItem = currentSelectItem;
     _currentSelectItem.selected = YES;
+    self.isAnimation = animation;
+      if(self.isAnimation)
+     [self addScaleAnimationWithSuperLayer:_currentSelectItem.layer];
+}
+
+- (void)addScaleAnimationWithSuperLayer:(CALayer *)layer
+{
+    CAKeyframeAnimation *keyAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    keyAnimation.values = @[@0.8,@1.1,@1.0];
+    keyAnimation.duration = 0.25;
+    keyAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [layer addAnimation:keyAnimation forKey:@"keyAnimation"];
 }
 
 #pragma mark - lazy

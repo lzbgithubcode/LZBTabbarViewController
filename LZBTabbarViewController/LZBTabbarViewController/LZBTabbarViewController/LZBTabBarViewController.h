@@ -23,12 +23,36 @@
 /**
  *  当前选中的控制器
  */
-@property(nonatomic, strong)  UIViewController *selectedViewController;
+@property(nonatomic, strong, readonly)  UIViewController *lzb_selectedViewController;
+
+
+/**
+ 当前选中的控制器,是否包含动画效果
+
+ @param selectedViewController 选中按个控制器
+ @param animation 动画效果
+ */
+- (void)setSelectedViewController:(UIViewController *)selectedViewController  animation:(BOOL)animation;
+
 
 /**
  *  当前选中的控制器的索引
  */
-@property(nonatomic) NSUInteger selectedIndex;
+@property(nonatomic, assign) NSUInteger selectedIndex;
+
+/**
+  当前选中的控制器索引,是否包含动画效果
+
+ @param selectedIndex 选中索引
+ @param animation 是否动画
+ */
+- (void)setSelectedIndex:(NSUInteger)selectedIndex animation:(BOOL)animation;
+
+
+/**
+    是否允许动画
+ */
+@property (nonatomic, assign) BOOL isShouldAnimation;
 
 /**
  *  获得当前tabbar

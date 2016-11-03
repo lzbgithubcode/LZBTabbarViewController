@@ -102,7 +102,7 @@
 /**
  *  角标文字颜色
  */
-@property (nonatomic,strong) UIColor *badgeTextColor;
+@property (nonatomic, strong) UIColor *badgeTextColor;
 
 /**
  *  角标文字字体
@@ -139,6 +139,11 @@
  *  TabBar设置当前选中的item
  */
 @property (nonatomic , strong) LZBTabBarItem *currentSelectItem;
+
+/**
+ *  TabBar设置当前选中的item,animation动画
+ */
+- (void)setCurrentSelectItem:(LZBTabBarItem *)currentSelectItem animation:(BOOL)animation;
 
 /**
  * TabBar顶部分割线

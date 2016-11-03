@@ -11,7 +11,7 @@
 
 #define LZB_TABBAR_DEFULT_HEIGHT 49
 @interface LZBTabBarViewController ()<LZBTabBarDelegate>
-
+@property(nonatomic, strong)  UIViewController *selectedViewController;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) LZBTabBar *tabbar;
 @end
@@ -22,6 +22,7 @@
     [super viewDidLoad];
     [self.view addSubview:self.contentView];
     [self.view addSubview:self.tabbar];
+    self.isShouldAnimation = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -57,6 +58,11 @@
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex
 {
+    [self setSelectedIndex:selectedIndex animation:self.isShouldAnimation];
+}
+
+- (void)setSelectedIndex:(NSUInteger)selectedIndex animation:(BOOL)animation
+{
     if(selectedIndex >= self.viewControllers.count) return;
     if(self.selectedViewController)
     {
@@ -65,7 +71,10 @@
         [self.selectedViewController removeFromParentViewController];
     }
     _selectedIndex = selectedIndex;
-    self.tabbar.currentSelectItem = [self.tabbar.items objectAtIndex:selectedIndex];
+    
+    self.isShouldAnimation = animation;
+    LZBTabBarItem *selectItem = [self.tabbar.items objectAtIndex:selectedIndex];
+    [self.tabbar setCurrentSelectItem:selectItem animation:animation];
     
     self.selectedViewController = [self.viewControllers objectAtIndex:selectedIndex];
     [self addChildViewController:self.selectedViewController];
@@ -73,7 +82,14 @@
     [self.contentView addSubview:self.selectedViewController.view];
     [self.selectedViewController didMoveToParentViewController:self];
     [self setNeedsStatusBarAppearanceUpdate];
-    
+}
+
+- (void)setSelectedViewController:(UIViewController *)selectedViewController  animation:(BOOL)animation
+{
+    if(![self.viewControllers containsObject:selectedViewController]) return;
+    NSInteger index = [self.viewControllers indexOfObject:selectedViewController];
+    self.isShouldAnimation = animation;
+    [self setSelectedIndex:index animation:self.isShouldAnimation];
 }
 
 - (NSInteger)indexForTabBarViewControllerViewControllers:(UIViewController *)viewController
@@ -83,6 +99,12 @@
     return [self.viewControllers indexOfObject:viewController];
       
 }
+-(UIViewController *)lzb_selectedViewController
+{
+    return self.selectedViewController;
+}
+
+
 
 #pragma mark- tabbarDelegate
 - (BOOL)lzb_tabBar:(LZBTabBar *)tabBar shouldSelectItemAtIndex:(NSInteger)index
@@ -115,7 +137,7 @@
 - (void)lzb_tabBar:(LZBTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index
 {
    if (index < 0 || index >= self.viewControllers.count)  return;
-    [self setSelectedIndex:index];
+    [self setSelectedIndex:index animation:self.isShouldAnimation];
     if([self.delegate respondsToSelector:@selector(lzb_tabBarController:didSelectViewController:)])
     [self.delegate lzb_tabBarController:self didSelectViewController:[self.viewControllers objectAtIndex:index]];
 }
@@ -139,7 +161,6 @@
    if(_tabbar == nil)
    {
        _tabbar = [[LZBTabBar alloc]init];
-       _tabbar.backgroundColor = [UIColor yellowColor];
        _tabbar.autoresizingMask = UIViewAutoresizingFlexibleWidth|
                                    UIViewAutoresizingFlexibleTopMargin|
                                    UIViewAutoresizingFlexibleLeftMargin|
@@ -149,6 +170,11 @@
        _tabbar.delegate = self;
    }
     return _tabbar;
+}
+
+- (LZBTabBar *)lzb_tabBar
+{
+    return self.tabbar;
 }
 @end
 

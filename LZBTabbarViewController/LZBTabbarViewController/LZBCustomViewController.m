@@ -30,19 +30,22 @@
     
     c1.lzb_tabBarItem.selectImage = [UIImage imageNamed:@"icon_tab_btn_discover_s"];
     c1.lzb_tabBarItem.unSelectImage = [UIImage imageNamed:@"icon_tab_btn_discover_x"];
-    c1.lzb_tabBarItem.badgeValue = @"1";
-    c1.lzb_tabBarItem.title = @"1";
+    c1.lzb_tabBarItem.badgeValue = @"10";
+    c1.lzb_tabBarItem.badgeTextColor = [UIColor redColor];
+    c1.lzb_tabBarItem.titleOffest = UIOffsetMake(0, 5);
+    c1.lzb_tabBarItem.badgeOffset = UIOffsetMake(15, 5);
+
     
-   
     c2.lzb_tabBarItem.selectImage = [UIImage imageNamed:@"icon_tab_btn_grow-up_s"];
     c2.lzb_tabBarItem.unSelectImage = [UIImage imageNamed:@"icon_tab_btn_grow-up_x"];
-    c2.lzb_tabBarItem.title = @"2";
-    
+    c2.lzb_tabBarItem.badgeBackgroundColor = [UIColor redColor];
+    c2.lzb_tabBarItem.badgeBackgroundOffset = UIOffsetMake(20, 5);
    
     c3.lzb_tabBarItem.selectImage = [UIImage imageNamed:@"icon_tab_btn_me_s"];
     c3.lzb_tabBarItem.unSelectImage = [UIImage imageNamed:@"icon_tab_btn_me_x"];
-    c3.lzb_tabBarItem.title = @"3";
-    
+    self.lzb_tabBar.backgroundColor = [UIColor  whiteColor];
+    [self setSelectedIndex:1 animation:NO];
+   
 }
 
 
