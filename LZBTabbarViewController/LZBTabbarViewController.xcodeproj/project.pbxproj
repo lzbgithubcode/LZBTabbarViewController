@@ -14,6 +14,12 @@
 		186031681DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186031621DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_x@2x.png */; };
 		186031691DC9CCCE00BDEF78 /* icon_tab_btn_me_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186031631DC9CCCE00BDEF78 /* icon_tab_btn_me_s@2x.png */; };
 		1860316A1DC9CCCE00BDEF78 /* icon_tab_btn_me_x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186031641DC9CCCE00BDEF78 /* icon_tab_btn_me_x@2x.png */; };
+		188E5B0D1DCC280A00EF13BA /* LZBFirstVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B0C1DCC280A00EF13BA /* LZBFirstVC1.m */; };
+		188E5B101DCC282900EF13BA /* LZBFirstVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B0F1DCC282900EF13BA /* LZBFirstVC2.m */; };
+		188E5B131DCC284400EF13BA /* LZBSecondVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B121DCC284400EF13BA /* LZBSecondVC1.m */; };
+		188E5B161DCC285200EF13BA /* LZBSecondVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B151DCC285200EF13BA /* LZBSecondVC2.m */; };
+		188E5B191DCC286400EF13BA /* LZBThreeVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B181DCC286400EF13BA /* LZBThreeVC1.m */; };
+		188E5B1C1DCC287800EF13BA /* LZBThreeVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B1B1DCC287800EF13BA /* LZBThreeVC2.m */; };
 		18FAF2D91DC83F3E005E70FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2D81DC83F3E005E70FA /* main.m */; };
 		18FAF2DC1DC83F3E005E70FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2DB1DC83F3E005E70FA /* AppDelegate.m */; };
 		18FAF2E41DC83F3E005E70FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FAF2E31DC83F3E005E70FA /* Assets.xcassets */; };
@@ -34,6 +40,18 @@
 		186031621DC9CCCE00BDEF78 /* icon_tab_btn_grow-up_x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_btn_grow-up_x@2x.png"; sourceTree = "<group>"; };
 		186031631DC9CCCE00BDEF78 /* icon_tab_btn_me_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_btn_me_s@2x.png"; sourceTree = "<group>"; };
 		186031641DC9CCCE00BDEF78 /* icon_tab_btn_me_x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_tab_btn_me_x@2x.png"; sourceTree = "<group>"; };
+		188E5B0B1DCC280A00EF13BA /* LZBFirstVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBFirstVC1.h; sourceTree = "<group>"; };
+		188E5B0C1DCC280A00EF13BA /* LZBFirstVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBFirstVC1.m; sourceTree = "<group>"; };
+		188E5B0E1DCC282900EF13BA /* LZBFirstVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBFirstVC2.h; sourceTree = "<group>"; };
+		188E5B0F1DCC282900EF13BA /* LZBFirstVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBFirstVC2.m; sourceTree = "<group>"; };
+		188E5B111DCC284400EF13BA /* LZBSecondVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBSecondVC1.h; sourceTree = "<group>"; };
+		188E5B121DCC284400EF13BA /* LZBSecondVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBSecondVC1.m; sourceTree = "<group>"; };
+		188E5B141DCC285200EF13BA /* LZBSecondVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBSecondVC2.h; sourceTree = "<group>"; };
+		188E5B151DCC285200EF13BA /* LZBSecondVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBSecondVC2.m; sourceTree = "<group>"; };
+		188E5B171DCC286400EF13BA /* LZBThreeVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBThreeVC1.h; sourceTree = "<group>"; };
+		188E5B181DCC286400EF13BA /* LZBThreeVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBThreeVC1.m; sourceTree = "<group>"; };
+		188E5B1A1DCC287800EF13BA /* LZBThreeVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBThreeVC2.h; sourceTree = "<group>"; };
+		188E5B1B1DCC287800EF13BA /* LZBThreeVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBThreeVC2.m; sourceTree = "<group>"; };
 		18FAF2D41DC83F3E005E70FA /* LZBTabbarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZBTabbarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FAF2D81DC83F3E005E70FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18FAF2DA1DC83F3E005E70FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +100,10 @@
 			children = (
 				18FAF2FB1DC87F76005E70FA /* LZBMainViewController.h */,
 				18FAF2FC1DC87F76005E70FA /* LZBMainViewController.m */,
+				188E5B0B1DCC280A00EF13BA /* LZBFirstVC1.h */,
+				188E5B0C1DCC280A00EF13BA /* LZBFirstVC1.m */,
+				188E5B0E1DCC282900EF13BA /* LZBFirstVC2.h */,
+				188E5B0F1DCC282900EF13BA /* LZBFirstVC2.m */,
 			);
 			path = FirstVCManger;
 			sourceTree = "<group>";
@@ -91,6 +113,10 @@
 			children = (
 				18FAF2FE1DC87F8C005E70FA /* LZBSecondViewController.h */,
 				18FAF2FF1DC87F8C005E70FA /* LZBSecondViewController.m */,
+				188E5B111DCC284400EF13BA /* LZBSecondVC1.h */,
+				188E5B121DCC284400EF13BA /* LZBSecondVC1.m */,
+				188E5B141DCC285200EF13BA /* LZBSecondVC2.h */,
+				188E5B151DCC285200EF13BA /* LZBSecondVC2.m */,
 			);
 			path = SecondVCManger;
 			sourceTree = "<group>";
@@ -100,6 +126,10 @@
 			children = (
 				18FAF3011DC87F9A005E70FA /* LZBThreeViewController.h */,
 				18FAF3021DC87F9A005E70FA /* LZBThreeViewController.m */,
+				188E5B171DCC286400EF13BA /* LZBThreeVC1.h */,
+				188E5B181DCC286400EF13BA /* LZBThreeVC1.m */,
+				188E5B1A1DCC287800EF13BA /* LZBThreeVC2.h */,
+				188E5B1B1DCC287800EF13BA /* LZBThreeVC2.m */,
 			);
 			path = ThreeVCManger;
 			sourceTree = "<group>";
@@ -239,9 +269,15 @@
 				18FAF3031DC87F9A005E70FA /* LZBThreeViewController.m in Sources */,
 				18FAF3001DC87F8C005E70FA /* LZBSecondViewController.m in Sources */,
 				18FAF2FA1DC840F6005E70FA /* LZBTabBar.m in Sources */,
+				188E5B131DCC284400EF13BA /* LZBSecondVC1.m in Sources */,
+				188E5B1C1DCC287800EF13BA /* LZBThreeVC2.m in Sources */,
 				18FAF2DC1DC83F3E005E70FA /* AppDelegate.m in Sources */,
+				188E5B191DCC286400EF13BA /* LZBThreeVC1.m in Sources */,
+				188E5B101DCC282900EF13BA /* LZBFirstVC2.m in Sources */,
 				18FAF2D91DC83F3E005E70FA /* main.m in Sources */,
+				188E5B161DCC285200EF13BA /* LZBSecondVC2.m in Sources */,
 				186031511DC9C2FC00BDEF78 /* LZBCustomViewController.m in Sources */,
+				188E5B0D1DCC280A00EF13BA /* LZBFirstVC1.m in Sources */,
 				18FAF2F71DC840DA005E70FA /* LZBTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
