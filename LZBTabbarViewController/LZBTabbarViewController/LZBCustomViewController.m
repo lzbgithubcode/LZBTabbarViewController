@@ -26,7 +26,7 @@
     c2.title = @"第二页";
     LZBThreeViewController *c3=[[LZBThreeViewController alloc]init];
     c3.title = @"第三页";
-    self.viewControllers = @[c1,c2,c3];
+    self.viewControllers = @[[[UINavigationController alloc]initWithRootViewController:c1],[[UINavigationController alloc]initWithRootViewController:c2],[[UINavigationController alloc]initWithRootViewController:c3]];
     
     c1.lzb_tabBarItem.selectImage = [UIImage imageNamed:@"icon_tab_btn_discover_s"];
     c1.lzb_tabBarItem.unSelectImage = [UIImage imageNamed:@"icon_tab_btn_discover_x"];
@@ -44,7 +44,7 @@
     c3.lzb_tabBarItem.selectImage = [UIImage imageNamed:@"icon_tab_btn_me_s"];
     c3.lzb_tabBarItem.unSelectImage = [UIImage imageNamed:@"icon_tab_btn_me_x"];
     self.lzb_tabBar.backgroundColor = [UIColor  whiteColor];
-    [self setSelectedIndex:1 animation:NO];
+    self.isShouldAnimation = YES;
    
 }
 

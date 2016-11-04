@@ -74,7 +74,7 @@
     
     self.isShouldAnimation = animation;
     LZBTabBarItem *selectItem = [self.tabbar.items objectAtIndex:selectedIndex];
-    [self.tabbar setCurrentSelectItem:selectItem animation:animation];
+    [self.tabbar setCurrentSelectItem:selectItem animation:self.isShouldAnimation];
     
     self.selectedViewController = [self.viewControllers objectAtIndex:selectedIndex];
     [self addChildViewController:self.selectedViewController];
