@@ -7,6 +7,7 @@
 //
 
 #import "LZBThreeViewController.h"
+#import "LZBThreeVC1.h"
 
 @interface LZBThreeViewController ()
 
@@ -16,22 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = [UIColor redColor];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)buttonClick
+{
+   [self.navigationController pushViewController:[[LZBThreeVC1 alloc]init] animated:YES];   
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
 
 @end

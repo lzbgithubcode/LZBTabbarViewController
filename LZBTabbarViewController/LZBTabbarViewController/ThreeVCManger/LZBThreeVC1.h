@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LZBThreeVC1 : UIViewController
+#import "LZBBaseViewController.h"
+@interface LZBThreeVC1 : LZBBaseViewController
 
 @end

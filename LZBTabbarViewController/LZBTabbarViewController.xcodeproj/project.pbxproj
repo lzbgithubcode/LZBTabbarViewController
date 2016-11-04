@@ -20,6 +20,7 @@
 		188E5B161DCC285200EF13BA /* LZBSecondVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B151DCC285200EF13BA /* LZBSecondVC2.m */; };
 		188E5B191DCC286400EF13BA /* LZBThreeVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B181DCC286400EF13BA /* LZBThreeVC1.m */; };
 		188E5B1C1DCC287800EF13BA /* LZBThreeVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B1B1DCC287800EF13BA /* LZBThreeVC2.m */; };
+		188E5B1F1DCC65E700EF13BA /* LZBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5B1E1DCC65E700EF13BA /* LZBBaseViewController.m */; };
 		18FAF2D91DC83F3E005E70FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2D81DC83F3E005E70FA /* main.m */; };
 		18FAF2DC1DC83F3E005E70FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAF2DB1DC83F3E005E70FA /* AppDelegate.m */; };
 		18FAF2E41DC83F3E005E70FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FAF2E31DC83F3E005E70FA /* Assets.xcassets */; };
@@ -52,6 +53,8 @@
 		188E5B181DCC286400EF13BA /* LZBThreeVC1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBThreeVC1.m; sourceTree = "<group>"; };
 		188E5B1A1DCC287800EF13BA /* LZBThreeVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBThreeVC2.h; sourceTree = "<group>"; };
 		188E5B1B1DCC287800EF13BA /* LZBThreeVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBThreeVC2.m; sourceTree = "<group>"; };
+		188E5B1D1DCC65E700EF13BA /* LZBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBBaseViewController.h; sourceTree = "<group>"; };
+		188E5B1E1DCC65E700EF13BA /* LZBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBBaseViewController.m; sourceTree = "<group>"; };
 		18FAF2D41DC83F3E005E70FA /* LZBTabbarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZBTabbarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FAF2D81DC83F3E005E70FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18FAF2DA1DC83F3E005E70FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,13 +156,15 @@
 		18FAF2D61DC83F3E005E70FA /* LZBTabbarViewController */ = {
 			isa = PBXGroup;
 			children = (
+				186031521DC9CC5400BDEF78 /* Resource */,
+				18FAF2EE1DC83FA3005E70FA /* LZBTabbarViewController */,
 				188E5B081DCC27A600EF13BA /* FirstVCManger */,
 				188E5B091DCC27A600EF13BA /* SecondVCManger */,
 				188E5B0A1DCC27A600EF13BA /* ThreeVCManger */,
-				186031521DC9CC5400BDEF78 /* Resource */,
-				18FAF2EE1DC83FA3005E70FA /* LZBTabbarViewController */,
 				18FAF2DA1DC83F3E005E70FA /* AppDelegate.h */,
 				18FAF2DB1DC83F3E005E70FA /* AppDelegate.m */,
+				188E5B1D1DCC65E700EF13BA /* LZBBaseViewController.h */,
+				188E5B1E1DCC65E700EF13BA /* LZBBaseViewController.m */,
 				1860314F1DC9C2FC00BDEF78 /* LZBCustomViewController.h */,
 				186031501DC9C2FC00BDEF78 /* LZBCustomViewController.m */,
 				18FAF2E31DC83F3E005E70FA /* Assets.xcassets */,
@@ -271,6 +276,7 @@
 				18FAF2FA1DC840F6005E70FA /* LZBTabBar.m in Sources */,
 				188E5B131DCC284400EF13BA /* LZBSecondVC1.m in Sources */,
 				188E5B1C1DCC287800EF13BA /* LZBThreeVC2.m in Sources */,
+				188E5B1F1DCC65E700EF13BA /* LZBBaseViewController.m in Sources */,
 				18FAF2DC1DC83F3E005E70FA /* AppDelegate.m in Sources */,
 				188E5B191DCC286400EF13BA /* LZBThreeVC1.m in Sources */,
 				188E5B101DCC282900EF13BA /* LZBFirstVC2.m in Sources */,

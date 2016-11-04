@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LZBSecondViewController : UIViewController
+#import "LZBBaseViewController.h"
+@interface LZBSecondViewController : LZBBaseViewController
 
 @end

@@ -57,7 +57,18 @@
 /**
  *  获得当前tabbar
  */
-@property(nonatomic,strong,readonly) LZBTabBar *lzb_tabBar;
+@property(nonatomic, strong, readonly) LZBTabBar *lzb_tabBar;
+
+/**
+ *   隐藏导航条
+ */
+@property(nonatomic, assign)  BOOL lzb_tabBarHidden;
+
+
+/**
+    隐藏导航条，是否动画
+ */
+- (void)setLzb_tabBarHidden:(BOOL)lzb_tabBarHidden animated:(BOOL)animation;
 
 @end
 

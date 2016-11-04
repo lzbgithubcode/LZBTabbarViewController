@@ -29,6 +29,7 @@
 {
     [super viewWillAppear:animated];
     [self setSelectedIndex:self.selectedIndex];
+    [self setLzb_tabBarHidden:self.lzb_tabBarHidden animated:NO];
 }
 
 #pragma mark- API
@@ -102,6 +103,63 @@
 -(UIViewController *)lzb_selectedViewController
 {
     return self.selectedViewController;
+}
+
+- (void)setLzb_tabBarHidden:(BOOL)lzb_tabBarHidden animated:(BOOL)animation
+{
+    _lzb_tabBarHidden = lzb_tabBarHidden;
+    //定义Block处理隐藏的lzb_tabBarHidden
+    __weak LZBTabBarViewController *weakSelf = self;
+    void(^blcokHidden)() = ^{
+        CGSize fullSize = weakSelf.view.bounds.size;
+        CGFloat tabBarStartingY = fullSize.height;
+        CGFloat contentViewHeight = fullSize.height;
+        CGFloat tabBarHeight = CGRectGetHeight(weakSelf.lzb_tabBar.frame);
+        if(!tabBarHeight)  tabBarHeight = LZB_TABBAR_DEFULT_HEIGHT;
+        if(!lzb_tabBarHidden)  //显示
+        {
+            tabBarStartingY = fullSize.height - tabBarHeight;
+            weakSelf.lzb_tabBar.frame = CGRectMake(0, tabBarStartingY, fullSize.width, tabBarHeight);
+            weakSelf.lzb_tabBar.hidden = NO;
+        }
+        else
+        {
+            //不显示
+            weakSelf.lzb_tabBar.frame = CGRectMake(0, tabBarStartingY, fullSize.width, tabBarHeight);
+        }
+        weakSelf.contentView.frame = CGRectMake(0, 0, fullSize.width, contentViewHeight);
+    };
+    
+    //动画完成
+    void(^compeletion)(BOOL) =^(BOOL finish){
+        weakSelf.lzb_tabBar.hidden = finish;
+    };
+    
+
+    //动画
+    if(animation)
+    {
+        [UIView animateWithDuration:0.25 animations:^{
+            if(blcokHidden)
+                blcokHidden();
+        } completion:^(BOOL finished) {
+             if(compeletion && finished)
+                compeletion(lzb_tabBarHidden);
+        }];
+    }
+    else
+    {
+        if(blcokHidden)
+            blcokHidden();
+        if(compeletion)
+            compeletion(lzb_tabBarHidden);
+    }
+    
+}
+
+- (void)setLzb_tabBarHidden:(BOOL)lzb_tabBarHidden
+{
+    [self setLzb_tabBarHidden:lzb_tabBarHidden animated:NO];
 }
 
 
