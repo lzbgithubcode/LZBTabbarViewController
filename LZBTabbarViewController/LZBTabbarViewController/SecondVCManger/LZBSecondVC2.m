@@ -7,6 +7,7 @@
 //
 
 #import "LZBSecondVC2.h"
+#import "LZBCustomViewController.h"
 
 @interface LZBSecondVC2 ()
 
@@ -17,13 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    [self.button setTitle:@"回到tab第二页，并选择首页item" forState:UIControlStateNormal];
     
 }
 
 - (void)buttonClick
 {
-    
+    LZBCustomViewController *tabBarVC =(LZBCustomViewController *)self.lzb_tabBarController;
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    tabBarVC.selectedIndex = 0;
 }
+
 
 
 @end

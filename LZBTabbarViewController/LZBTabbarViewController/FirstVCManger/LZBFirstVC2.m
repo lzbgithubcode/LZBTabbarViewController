@@ -13,13 +13,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    [self.button setTitle:@"回到首页" forState:UIControlStateNormal];
     
 }
 
-
 - (void)buttonClick
 {
-   
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
