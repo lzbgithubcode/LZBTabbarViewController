@@ -32,7 +32,6 @@
     c1.lzb_tabBarItem.unSelectImage = [UIImage imageNamed:@"icon_tab_btn_discover_x"];
     c1.lzb_tabBarItem.badgeValue = @"10";
     c1.lzb_tabBarItem.badgeTextColor = [UIColor redColor];
-    c1.lzb_tabBarItem.titleOffest = UIOffsetMake(0, 5);
     c1.lzb_tabBarItem.badgeOffset = UIOffsetMake(15, 5);
 
     

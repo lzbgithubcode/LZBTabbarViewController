@@ -17,12 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    self.button.hidden = YES;
     
 }
 
 - (void)buttonClick
 {
-    [self.navigationController pushViewController:[[LZBThreeVC2 alloc]init] animated:YES];
+    
 }
 
 
